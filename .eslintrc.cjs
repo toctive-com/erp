@@ -11,15 +11,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
-      rules: {
-        '@nx/enforce-module-boundaries': [
-          'error',
-          {
-            // ...rule specific configuration
-            // @see https://nx.dev/packages/eslint-plugin/documents/enforce-module-boundaries
-          }
-        ]
-      }
+      rules: {}
     }
   ],
   parserOptions: {
@@ -29,6 +21,5 @@ module.exports = {
   plugins: [
     'react'
   ],
-  rules: {
-  }
+  rules: {}
 }
