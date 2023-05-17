@@ -5,6 +5,7 @@
 
 import express from 'express';
 import * as path from 'path';
+import initDatabase from '@/Database/connect';
 
 const app = express();
 
@@ -15,7 +16,8 @@ app.get('/api', (req, res) => {
 });
 
 const port = process.env.PORT || 3333;
-const server = app.listen(port, () => {
+const server = app.listen(port, async () => {
+  await initDatabase();
   console.log(`Listening at http://localhost:${port}/api`);
 });
 server.on('error', console.error);
