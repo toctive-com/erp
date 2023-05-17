@@ -12,7 +12,7 @@ const TaskSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String },
   isDone: { type: Boolean, default: false },
-  steps: { type: Array<String> },
+  steps: [{ type: String }],
 
   dueAt: { type: Date, default: null },
   createdAt: { type: Date, default: Date.now },
